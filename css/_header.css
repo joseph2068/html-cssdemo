@@ -1,0 +1,81 @@
+.menu li {
+  list-style: none;
+  text-align: center; }
+
+.logo {
+  float: left; }
+  @media (max-width: 767px) {
+    .logo {
+      max-width: 50%; } }
+
+.showmenu {
+  display: none; }
+
+.menu {
+  padding: 0;
+  line-height: 103px;
+  float: right;
+  text-align: center; }
+  .menu li {
+    float: left;
+    margin: 0 20px; }
+    .menu li a {
+      text-align: center;
+      color: #9a9a9a;
+      text-decoration: none; }
+      .menu li a:hover {
+        color: #f23f5f;
+        border-bottom: 2px solid #f23f5f;
+        padding-bottom: 5px; }
+      .menu li a i {
+        margin-right: 5px;
+        font-size: 19.2px;
+        padding: 5px 5px;
+        background: #f8f8f8;
+        border: 1px solid #e8e8e9; }
+  @media (max-width: 767px) {
+    .menu {
+      text-decoration: none;
+      margin-right: 0;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 2s;
+      margin-top: 1px;
+      position: absolute;
+      z-index: 100;
+      top: 63px;
+      left: 0;
+      right: 0;
+      line-height: 2;
+      background: rgba(154, 154, 154, 0.9); }
+      .menu li {
+        margin: 0;
+        float: none;
+        border-bottom: 1px dashed #ffffff; }
+        .menu li a {
+          display: block;
+          color: #fff; }
+          .menu li a i {
+            display: none; }
+          .menu li a:hover {
+            background: rgba(242, 63, 95, 0.5);
+            color: #fff;
+            text-decoration: none; } }
+
+.icon a:hover {
+  border: 0;
+  padding: 0; }
+
+@media (max-width: 767px) {
+  .showmenu {
+    display: block;
+    float: right;
+    margin: 30px 20px 0 0;
+    padding: 5px;
+    background: #9a9a9a;
+    color: #FFF;
+    text-decoration: none; } }
+
+@media (max-width: 767px) {
+  .menu-show .menu {
+    max-height: 600px; } }

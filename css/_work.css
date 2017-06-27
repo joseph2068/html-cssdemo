@@ -1,0 +1,96 @@
+.workmenu li {
+  list-style: none;
+  text-align: center; }
+
+.work {
+  margin: 0 auto;
+  height: 600px;
+  position: relative;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 20px; }
+  @media (max-width: 767px) {
+    .work {
+      margin-top: 900px; } }
+  .work h3 {
+    color: #f23f5f;
+    font-size: 24px;
+    text-align: center; }
+  .work p {
+    color: #9a9a9a;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center; }
+  .work .line {
+    width: 5%;
+    height: 2px;
+    background: #9a9a9a;
+    margin: 0 auto; }
+  .work h3 {
+    margin-top: 60px; }
+  .work .image {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    background: url(../img/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .work .cover {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    background: black;
+    opacity: 0.3; }
+
+.workmenu li {
+  margin-top: 20px; }
+  .workmenu li a {
+    display: block;
+    width: 100px;
+    margin: 10px auto 0 auto;
+    padding: 5px 10px;
+    background: #FFF;
+    color: #9a9a9a;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #9a9a9a; }
+    .workmenu li a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: #FFF; }
+
+.workmenu li + li:before {
+  padding: 0 6px; }
+
+.workitem {
+  margin: 40px 30px 62px 30px; }
+  .workitem li {
+    cursor: pointer; }
+  @media (max-width: 992px) {
+    .workitem {
+      margin-top: 200px; } }
+  .workitem li {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px; }
+    .workitem li img {
+      max-width: 100%;
+      height: auto; }
+    .workitem li h4 {
+      font-family: serif;
+      font-size: 19.2px;
+      color: black;
+      font-weight: bold; }
+  .workitem li {
+    letter-spacing: 2px;
+    background: #FFF;
+    padding: 0 0 10px 0;
+    color: #9a9a9a; }
+    .workitem li:hover {
+      opacity: 0.7; }

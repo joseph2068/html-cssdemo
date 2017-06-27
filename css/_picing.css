@@ -1,0 +1,66 @@
+.picing {
+  margin-top: 20px; }
+  .picing h3 {
+    color: #f23f5f;
+    font-size: 24px;
+    text-align: center; }
+  .picing p {
+    color: #9a9a9a;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center; }
+  .picing .line {
+    width: 5%;
+    height: 2px;
+    background: #9a9a9a;
+    margin: 0 auto; }
+
+.pcingitem {
+  margin: 20px auto 0 auto; }
+  @media (max-width: 992px) {
+    .pcingitem li {
+      margin-bottom: 20px; } }
+  .pcingitem li {
+    color: #9a9a9a;
+    list-style-type: none;
+    padding: 5px 10px;
+    text-align: center; }
+  .pcingitem h4 {
+    font-family: serif;
+    font-size: 19.2px;
+    color: black;
+    font-weight: bold; }
+  .pcingitem img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50% 50%;
+    margin: 10px auto; }
+  .pcingitem p {
+    font-size: 14.4px;
+    font-family: serif;
+    color: #9a9a9a; }
+  .pcingitem a {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100px;
+    padding: 5px 10px;
+    background: #f23f5f;
+    color: #FFF;
+    text-decoration: none; }
+  .pcingitem li {
+    padding: 20px;
+    border: 1px solid #9a9a9a;
+    transition: ease .5s; }
+    .pcingitem li:hover {
+      background: #f23f5f;
+      color: #FFF; }
+      .pcingitem li:hover p {
+        color: #FFF;
+        border-bottom: 1px solid #FFF; }
+      .pcingitem li:hover a {
+        background: #FFF;
+        color: #f23f5f; }
+  .pcingitem p {
+    border-bottom: 1px solid #9a9a9a;
+    padding-bottom: 5px; }
