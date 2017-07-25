@@ -98,6 +98,7 @@ figure {
   margin: 1em 40px; }
 
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -148,6 +149,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
@@ -157,6 +159,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -193,6 +196,7 @@ th {
   *:after {
     background: transparent !important;
     color: #000 !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -1391,6 +1395,7 @@ dd {
     clear: left;
     text-align: right;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap; }
   .dl-horizontal dd {
@@ -1471,11 +1476,13 @@ kbd {
   color: #fff;
   background-color: #333;
   border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
   kbd kbd {
     padding: 0;
     font-size: 100%;
     font-weight: bold;
+    -webkit-box-shadow: none;
     box-shadow: none; }
 
 pre {
@@ -2321,7 +2328,10 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; }
   .form-control:focus {
     border-color: #66afe9;
     outline: 0;
@@ -3128,10 +3138,13 @@ tbody.collapse.in {
   height: 0;
   overflow: hidden;
   -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
   transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
   transition-duration: 0.35s;
   -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
   transition-timing-function: ease; }
 
 .caret {
@@ -3686,6 +3699,7 @@ tbody.collapse.in {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch; }
   .navbar-collapse:before, .navbar-collapse:after {
@@ -3699,6 +3713,7 @@ tbody.collapse.in {
     .navbar-collapse {
       width: auto;
       border-top: 0;
+      -webkit-box-shadow: none;
       box-shadow: none; }
       .navbar-collapse.collapse {
         display: block !important;
@@ -3815,6 +3830,7 @@ tbody.collapse.in {
       margin-top: 0;
       background-color: transparent;
       border: 0;
+      -webkit-box-shadow: none;
       box-shadow: none; }
       .navbar-nav .open .dropdown-menu > li > a,
       .navbar-nav .open .dropdown-menu .dropdown-header {
@@ -5086,6 +5102,7 @@ button.close {
     -moz-transition: -moz-transform 0.3s ease-out;
     -o-transition: -o-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
   .modal.in .modal-dialog {
@@ -5443,6 +5460,7 @@ button.close {
         -moz-transition: -moz-transform 0.6s ease-in-out;
         -o-transition: -o-transform 0.6s ease-in-out;
         transition: -webkit-transform 0.6s ease-in-out;
+        -o-transition: transform 0.6s ease-in-out;
         transition: transform 0.6s ease-in-out;
         transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
         -webkit-backface-visibility: hidden;
@@ -5502,6 +5520,7 @@ button.close {
   .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
@@ -5510,6 +5529,7 @@ button.close {
     right: 0;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
@@ -5864,6 +5884,8 @@ button.close {
       margin-right: 0;
       max-height: 0px;
       overflow: hidden;
+      -webkit-transition: max-height 2s;
+      -o-transition: max-height 2s;
       transition: max-height 2s;
       margin-top: 1px;
       position: absolute;
@@ -5946,10 +5968,6 @@ button.close {
   background: black;
   opacity: 0.3; }
 
-.menu li, .workmenu li {
-  list-style: none;
-  text-align: center; }
-
 .service {
   margin: 0 auto;
   margin-top: 20px; }
@@ -5999,20 +6017,36 @@ button.close {
     .service .item li {
       position: relative;
       height: 300px;
-      transition: ease 0.5s; }
+      -webkit-transition: height 0.5s 2.5s,background 0.5s 2.5s;
+      -o-transition: height 0.5s 2.5s,background 0.5s 2.5s;
+      transition: height 0.5s 2.5s,background 0.5s 2.5s; }
+      .service .item li i {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s 3s;
+        -o-transition: opacity 0.5s 3s;
+        transition: opacity 0.5s 3s; }
       .service .item li:hover {
         height: 350px;
-        background: #f23f5f; }
+        background: #f23f5f;
+        -webkit-transition: background 0.5s .5s,height 0.5s .5s;
+        -o-transition: background 0.5s .5s,height 0.5s .5s;
+        transition: background 0.5s .5s,height 0.5s .5s; }
         .service .item li:hover i {
-          display: none; }
+          opacity: 0;
+          -webkit-transition: opacity 0.5s;
+          -o-transition: opacity 0.5s;
+          transition: opacity 0.5s; }
     .service .item li:hover + .cv {
-      display: block;
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: opacity 0.5s 1s;
+      -o-transition: opacity 0.5s 1s;
+      transition: opacity 0.5s 1s; }
 
 .cv {
-  display: none;
   opacity: 0;
-  transition: ease 0.5s;
+  -webkit-transition: all .5s 2s;
+  -o-transition: all .5s 2s;
+  transition: all .5s 2s;
   position: absolute;
   z-index: 100;
   text-align: center;
@@ -6029,10 +6063,6 @@ button.close {
     background: #9a9a9a;
     color: #FFF;
     text-decoration: none; }
-
-.menu li, .workmenu li {
-  list-style: none;
-  text-align: center; }
 
 .work {
   margin: 0 auto;
@@ -6179,10 +6209,6 @@ button.close {
     .pic img {
       margin-top: 50px; } }
 
-.menu li, .workmenu li {
-  list-style: none;
-  text-align: center; }
-
 .picing {
   margin-top: 20px; }
   .picing h3 {
@@ -6236,10 +6262,15 @@ button.close {
   .pcingitem li {
     padding: 20px;
     border: 1px solid #9a9a9a;
+    -webkit-transition: ease .5s;
+    -o-transition: ease .5s;
     transition: ease .5s; }
     .pcingitem li:hover {
       background: #f23f5f;
-      color: #FFF; }
+      color: #FFF;
+      -webkit-transition: ease .5s;
+      -o-transition: ease .5s;
+      transition: ease .5s; }
       .pcingitem li:hover p {
         color: #FFF;
         border-bottom: 1px solid #FFF; }
@@ -6249,10 +6280,6 @@ button.close {
   .pcingitem p {
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 5px; }
-
-.menu li, .workmenu li {
-  list-style: none;
-  text-align: center; }
 
 .footer {
   background: url(../img/banner1.jpg);
@@ -6277,6 +6304,7 @@ button.close {
 
 .bottommenu {
   margin: 20px 40px;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -6286,6 +6314,8 @@ button.close {
   .bottommenu li {
     list-style-type: none;
     text-align: center; }
+    .bottommenu li:nth-child(4) {
+      font-size: 12px; }
     @media (max-width: 992px) {
       .bottommenu li {
         display: none; } }
@@ -6294,10 +6324,10 @@ button.close {
     margin: 10px auto 0 auto;
     width: 100px;
     padding: 5px 10px;
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.5);
     color: black;
     text-decoration: none; }
   .bottommenu i {
     margin-right: 5px;
-    color: #9a9a9a;
+    color: #000;
     font-size: 16px; }
