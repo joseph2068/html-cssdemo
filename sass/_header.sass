@@ -1,0 +1,91 @@
+.logo
+	float: left
+	+sm
+		max-width: 50%
+
+// 漢堡選單預設隱藏
+.showmenu
+	display: none
+
+.menu
+	padding: 0
+	line-height: 103px
+	float: right
+	text-align: center
+	li
+		float: left
+		margin: 0 20px
+		@extend %menu_li
+		a
+			text-align: center
+			color: #9a9a9a
+			text-decoration: none
+			&:hover
+				+ac_hover
+				border-bottom: 2px solid #f23f5f
+				padding-bottom: 5px
+			i
+				margin-right: 5px
+				font-size: $font_m*1.2
+				padding: 5px 5px
+				+bg
+				border: 1px solid #e8e8e9 	
+	+sm
+		text-decoration: none
+		margin-right: 0
+		max-height: 0px
+		overflow: hidden
+		transition: max-height 2s
+		margin-top: 1px
+		position: absolute
+		z-index: 100
+		top: 77px
+		left: 0
+		right: 0
+		line-height: 3
+		+bg(rgba(154,154,154,1))
+		li
+			margin: 0
+			float: none
+			border-bottom: 1px dashed #ffffff
+			a
+				display: block
+				color: #fff
+				text-decoration: none
+				i
+					display: none
+				&:hover
+					background: rgba(242,63,95,0.5)
+					color: #fff
+
+.icon
+	a
+		&:hover
+			border: 0
+			padding: 0
+
+.showmenu
+	+sm
+		display: block
+		float: right
+		margin: 30px 20px 0 0 
+		padding: 5px
+		background: #9a9a9a
+		color: #FFF
+		text-decoration: none
+		&:hover,&:focus
+			text-decoration: none	
+.menu-show .menu
+	+sm
+		max-height: 600px
+
+										
+
+	
+
+
+
+
+
+
+

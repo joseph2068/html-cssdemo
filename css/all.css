@@ -5890,24 +5890,24 @@ button.close {
       margin-top: 1px;
       position: absolute;
       z-index: 100;
-      top: 63px;
+      top: 77px;
       left: 0;
       right: 0;
-      line-height: 2;
-      background: rgba(154, 154, 154, 0.9); }
+      line-height: 3;
+      background: #9a9a9a; }
       .menu li {
         margin: 0;
         float: none;
         border-bottom: 1px dashed #ffffff; }
         .menu li a {
           display: block;
-          color: #fff; }
+          color: #fff;
+          text-decoration: none; }
           .menu li a i {
             display: none; }
           .menu li a:hover {
             background: rgba(242, 63, 95, 0.5);
-            color: #fff;
-            text-decoration: none; } }
+            color: #fff; } }
 
 .icon a:hover {
   border: 0;
@@ -5921,7 +5921,9 @@ button.close {
     padding: 5px;
     background: #9a9a9a;
     color: #FFF;
-    text-decoration: none; } }
+    text-decoration: none; }
+    .showmenu:hover, .showmenu:focus {
+      text-decoration: none; } }
 
 @media (max-width: 767px) {
   .menu-show .menu {

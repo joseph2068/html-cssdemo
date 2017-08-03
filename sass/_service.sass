@@ -1,0 +1,49 @@
+.service
+
+	margin: 0 auto
+	+topic
+	.item
+		margin: 40px 0 40px 0
+		height: 350px 
+		position: relative
+		+sv_item
+
+		li
+			position: relative
+			height: 300px
+			transition: height 0.5s 2.5s,background 0.5s 2.5s
+			i
+				opacity: 1
+				transition: opacity 0.5s 3s
+			&:hover
+				height: 350px
+				background: #f23f5f 
+				transition: background 0.5s .5s,height 0.5s .5s
+				i
+					opacity: 0
+					transition: opacity 0.5s
+
+		li
+			&:hover+.cv
+				opacity: 1
+				transition: opacity.5s 1s
+
+.cv
+	opacity: 0
+	transition: all .5s 2s
+	position: absolute
+	z-index: 100
+	text-align: center
+	left: 15px
+	right: 15px
+	bottom: 25px
+	padding: 0 15px
+	color: #FFF 
+	a
+		display: block
+		margin: 10px auto 0 auto
+		width: 100px
+		padding: 5px 10px
+		background: #9a9a9a
+		color: #FFF
+		text-decoration: none
